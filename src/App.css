@@ -1,0 +1,125 @@
+*,html {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  flex-direction: column;
+  overflow-x: hidden;
+  
+}
+
+.screen1{
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  border: 1px solid black;
+  margin: 5px;
+}
+.screen2{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+  margin-bottom: 100px;
+  font-family: 'Lora', serif;
+
+}
+
+.textHallo{
+  font-size: 8rem;
+  font-family: 'Lora', serif;
+}
+.textQuestion{
+  font-size: 40px;
+  font-family: 'Lora', serif;
+}
+
+.buttonIsItYourBirthday {
+  font-family: 'Lora', serif;
+  font-size: 30px;
+  border-width: 0;
+  background-color:rgb(37, 150, 190);
+  margin: 30px;
+  border-radius: 10px;
+  width: 140px;
+}
+
+.buttonIsItYourBirthday:click {
+  background-color: white;
+}
+
+.containerWords{
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border: 1px solid black;
+  margin: 5px;
+}
+.glimpseText,
+.firstWords {
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Lora', serif;
+}
+
+
+
+.keepScrollWords {
+  padding-top: 20px;
+  color: rgb(37, 150, 190);
+  font-size: 25px;
+  font-family: 'Lora', serif;
+
+}
+
+.animationContainer {
+  width: 50%;
+  height: 30%;
+}
+
+.screen3{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 97%;  
+  flex-direction: column;
+  border: 1px solid black;
+  margin: 5px;
+}
+
+.imageContainer {
+  
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Adjust the number of columns as needed */
+  grid-gap: 10px; /* Adjust the gap between images as needed */
+  padding: 20px;
+  width:100%;
+  height: 100%;
+}
+
+.imageContainer img {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+}
+
+.container2{
+  
+  width: 100%;
+  height: 100vh;
+}
