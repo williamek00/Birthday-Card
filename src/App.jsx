@@ -17,7 +17,6 @@ import sakitImg6 from './assets/sakit6.jpeg'
 import sakitImg7 from './assets/sakit7.jpeg'
 import sakitImg8 from './assets/sakit8.jpeg'
 import sakitImg9 from './assets/sakit9.jpeg'
-import sakitImg10 from './assets/sakit10.jpeg'
 gsap.registerPlugin(ScrollTrigger); // Register the ScrollTrigger plugin
 function App() {
   const [isPlaying, setIsPlaying] = useState(false);
@@ -37,6 +36,8 @@ function App() {
   const scrollToDiv = (divId) => {
     const targetDiv = document.getElementById(divId);
     targetDiv.scrollIntoView({ behavior: 'smooth' });
+    setIsPlaying(true);
+
   };
 
 
@@ -53,21 +54,14 @@ function App() {
       tl.to(image, { opacity: 1, duration: 0.5, delay: index * 0.1 });
     });
 
-    ScrollTrigger.create({
-      trigger: '.containerWords',
-      start: 'top center',
-      animation: tl,
-      markers: true,
-      toggleActions: 'play none none none',
-    });
-
-
     gsap.to(numberRef.current, {
-      duration: 5,
+      duration: 3,
       scrollTrigger: {
         trigger: '.containerWords',
-        start: '35% center',
-        toggleActions: "play none pause reverse",
+        start: '200px center',
+        end: 'center center',
+        markers: true
+        // toggleActions: "play none pause pause",
       },
       innerHTML: targetNumber,
     });
@@ -97,6 +91,16 @@ function App() {
       delay: 1.5
 
     });
+    // gsap.to('.wrapper', {
+    //   scrollTrigger: {
+    //     trigger: '.wrapper',
+    //     start: 'top center',
+    //     // toggleActions: "play none pause pause",
+    //     scrub: true,
+    //     markers: true
+    //   },
+    // })
+
 
     if (showContent) {
       gsap.to('.screen2', {
@@ -156,7 +160,7 @@ function App() {
           </div>
         </div>
         <div className='screen3' >
-          <h1 className='glimpseText' >This is a glimpse of what you've been through.</h1>
+          <h1 className='glimpseText' >Happy birthday, love.</h1>
           <div className='imageContainer' ref={containerRef} >
             <img className='img1' src={sakitImg1} />
             <img className='img2' src={sakitImg2} />
@@ -170,16 +174,23 @@ function App() {
           </div>
         </div>
         <div className='screen2'>
-          <h1>I</h1>
-          <h1>&nbsp;</h1>
-          <h1>L</h1>
-          <h1>O</h1>
-          <h1>V</h1>
-          <h1>E</h1>
-          <h1>&nbsp;</h1>
-          <h1>Y</h1>
-          <h1>O</h1>
-          <h1>U</h1>
+          <div className='wrapper'>
+            <h1 className='iloveyou' > I LOVE YOU</h1>
+          </div>
+        </div>
+
+        <div className='ucapan' >
+          <h1>As I sent this form of love to you, half of my soul by the grace of Jesus Christ, having 22nd birthday.</h1>
+          <h1>By this very moment, I want to say thank you for your self for surviving this far. </h1>
+          <h1>These few years back has been the toughest and challenging years for both of us.</h1>
+          <h1>And those few years has tought me a lot about you. </h1>
+          <h1>I have seen you in your tears, anger, smile and my favourite was your laugh.</h1>
+          <h1>I have seen you in your bad form(haven't showered yet) and your daily shimmering splendid form. </h1>
+          <h1>And I came to concluse that I see good in you, beautiful heart. </h1>
+          <h1>Babe, I wish you nothing but happiness, and healthy.</h1>
+          <h1>I wish you nothing but successfull career and be a light where you must be.</h1>
+          <h1>I hope your decision to follow Jesus would be a price of death, knowing Jesus would loves you unconditionally.</h1>
+          <h1>-Most Handsome Boyfriend In Earth</h1>
         </div>
       </div>
 
